@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: api-container
-        image: לא לשכוח
+        image: yehudagav/weapon-api:latest
         env:
         - name: MYSQL_HOST
           value: "mysql"
@@ -26,3 +26,7 @@ spec:
           value: "weapon_db"
         ports:
         - containerPort: 8000
+
+
+
+
