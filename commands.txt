@@ -1,0 +1,17 @@
+docker build -t weapon-api:latest .
+
+oc apply -f k8s/mysql-service.yaml
+
+oc apply -f k8s/mysql-statefulset.yaml
+
+oc apply -f k8s/api-service.yaml
+
+oc apply -f k8s/api-deployment.yaml
+
+oc expose svc/api-service
+
+oc get pods
+
+oc get svc
+
+oc get routes
